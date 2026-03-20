@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArdenoProductionCredit from './ArdenoProductionCredit';
 
 export const Footer: React.FC = () => {
   return (
@@ -144,38 +145,14 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 pb-24 md:pb-0 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+        <div className="border-t border-white/10 pt-8 pb-24 md:pb-0 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500 mb-8">
           <p>&copy; {new Date().getFullYear()} Fitness Lanka. All rights reserved.</p>
-
-          {/* Upgraded signature badge */}
-          <div className="flex justify-center md:justify-end w-full md:w-auto">
-            <div className="relative group">
-              {/* soft glow behind */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-neon-blue/25 via-white/10 to-neon-orange/25 blur-lg opacity-40 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none" />
-
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl px-5 py-2.5 shadow-[0_0_25px_rgba(0,0,0,0.35)] group-hover:border-neon-blue/30 group-hover:bg-white/10 transition-all duration-500 group-hover:-translate-y-0.5">
-                {/* shimmer sweep */}
-                <div className="absolute inset-0 -translate-x-[130%] group-hover:translate-x-[130%] transition-transform duration-1000 ease-out pointer-events-none">
-                  <div className="h-full w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-12" />
-                </div>
-
-                <div className="flex items-center gap-3 text-xs md:text-sm">
-                  <span className="text-gray-400">Website</span>
-                  <span className="h-4 w-px bg-white/10" />
-
-                  <span className="text-white/90 font-semibold">
-                    Designed &amp; Developed by{" "}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-white to-neon-orange font-black">
-                      Ardeno Studio
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
+        <ArdenoProductionCredit />
       </div>
     </footer>
   );
 };
+
+export default Footer;
